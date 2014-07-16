@@ -1072,7 +1072,7 @@ file3 file4 file5
 # lvconvert \-\-merge vg/thin1s1
 Logical volume vg/thin1s1 contains a filesystem in use.
 Delaying merge since snapshot is open.
-Merging of thin snapshot thin1s1 will occur on next activation.
+Merging of thin snapshot will occur on next activation of thin1.
 
 # umount /mnt/X
 # umount /mnt/Xs

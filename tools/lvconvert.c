@@ -2283,8 +2283,8 @@ static int _lvconvert_merge_old_snapshot(struct cmd_context *cmd,
 		if (!vg_commit(lv->vg))
 			return_0;
 		r = 1;
-		log_print_unless_silent("Merging of snapshot %s will start "
-					"next activation.", lv->name);
+		log_print_unless_silent("Merging of snapshot will start "
+					"next activation of %s.", lv->origin);
 		goto out;
 	}
 
@@ -2390,8 +2390,8 @@ static int _lvconvert_merge_thin_snapshot(struct cmd_context *cmd,
 	if (!vg_write(lv->vg) || !vg_commit(lv->vg))
 		return_0;
 
-	log_print_unless_silent("Merging of thin snapshot %s will occur on "
-				"next activation.", lv->name);
+	log_print_unless_silent("Merging of thin snapshot will occur on "
+				"next activation of %s.", lv->origin);
 	r = 1;
 out:
 	backup(lv->vg);
